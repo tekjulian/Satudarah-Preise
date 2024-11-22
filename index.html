@@ -1,0 +1,904 @@
+<<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="./banner-styles.css">
+  <link rel="stylesheet" type="text/css" href="./iconochive.css"> 
+    <title>Satudarah - Waffenshop</title>
+    <script src="./jquery.min.js" type="a7028809922273d75aaa8e6b-text/javascript"></script>
+    <style>
+      @font-face {
+        font-family: Gilroy;
+        src: local('Gilroy ExtraBlack'), local('Gilroy-ExtraBlack'), url(./Gilroy-ExtraBold.otf) format('opentype');
+        font-weight: 900;
+        font-style: normal
+      }
+  
+      @font-face {
+        font-family: Gilroy-light;
+        src: local('Pricedown'), local('Gilroy-Light'), url(./Gilroy-Light.otf) format('opentype');
+        font-weight: 1200;
+        font-style: normal
+      }
+  
+      .svg-background {
+        position: fixed;
+        z-index: -1;
+        left: -154px;
+        opacity: 0.2
+      }
+  
+      .footer .made p span,
+      .info-text,
+      .logo-header,
+      .product-list .product span {
+          text-align: center
+      }
+  
+  @font-face {
+      font-family: Gilroy;
+        src: local('Gilroy ExtraBlack'), local('Gilroy-ExtraBlack'), url(./Gilroy-ExtraBold.otf) format('opentype');
+      font-weight: 900;
+      font-style: normal
+  }
+  
+  @font-face {
+      font-family: Pricedown;
+      src: local('Gilroy Light'), local('Gilroy-Light'), url(./Gilroy-Light.otf) format('opentype');
+      font-weight: 1200;
+      font-style: normal
+  }
+  
+  body {
+      background-color: #000000;
+      user-select: none;
+      font-family: Pricedown;
+      margin: 0
+  }
+  
+  .footer,
+  .menu-list p,
+  .product-list .product .aufpreis,
+  li {
+      font-family: Pricedown
+  }
+  
+  hr {
+      width: 100%
+  }
+  
+  .cs {
+      display: flex;
+      min-height: 100%;
+      height: 100%;
+      flex-direction: column
+  }
+  
+  .logo-header {
+      width: 100%;
+      margin-bottom: 20px;
+      background-color: #000000ba;
+      padding: 15px 0
+  }
+  
+  .product-list,
+  section {
+      margin: 0 auto auto
+  }
+  
+  .info-text p {
+      color: #ffffff
+  }
+  
+  .info-text span,
+  .product-list .product {
+      color: #ff0000
+  }
+  
+  .product-list {
+      max-width: 1934px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center
+  }
+  
+  .product-list .product {
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 1px 10px 0 #ffffff1f;
+      background: #0c0c0c;
+      border: 1px solid #ffffff2b;
+      padding: 20px;
+      margin: 10px;
+      height: auto;
+      width: 200px;
+      border-radius: 20px;
+      transition: transform .3s
+  }
+  
+  .product-list .product:hover {
+      transform: scale(1.03)
+  }
+  
+  .product-list .product img {
+      width: 200px
+  }
+  
+  .product-list .product .weaponname {
+      color: #fff;
+      text-align: center;
+      margin: 13px;
+      font-size: 22px;
+      min-height: 57px
+  }
+  
+  .product-list .product .attachment {
+      min-height: 184px;
+      font-family: Gilroy-Light
+  }
+  
+  .product-list .product .attachment .checkbox {
+      margin-bottom: 3px
+  }
+  
+  .product-list .product .aufpreis {
+      color: #ffea00;
+      padding-left: 25px;
+      margin: 0;
+      font-size: 13px
+  }
+  
+  .product-list .product .attachment fieldset {
+      padding-inline-start: 0;
+      border-color: #fff0;
+      margin-inline-start: 0;
+      border-width: 0
+  }
+  
+  .product-list .product .attachment fieldset label {
+      padding-left: 9px;
+      color: #fff
+  }
+  
+  .product-list .product .price {
+      padding-top: 13px;
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Gilroy;
+      border: 2px inset #ffd70000;
+      border-top-color: #fff
+  }
+  
+  .product-list .product p {
+      text-align: left
+  }
+  
+  .product-list .product .price P:first-child {
+      color: #ffea00;
+      border: 1px solid #ffd70000;
+      border-right-color: #fff;
+      width: auto;
+      padding: 0 10px 6px 6px;
+      margin-top: 3px;
+      margin-bottom: 0
+  }
+  
+  .footer white,
+  .kj p,
+  .menu-list p,
+  li {
+      color: #fff
+  }
+  
+  .product-list .product .price P:last-child {
+      color: #fff;
+      border: 1px solid #ffd70000;
+      border-left-color: #fff;
+      width: auto;
+      padding: 0 6px 6px 10px;
+      margin-top: 3px;
+      margin-bottom: 0
+  }
+  
+  .product-list .product p::last-line {
+      color: #fff
+  }
+  
+  .kj {
+      display: flex;
+      justify-content: center;
+      align-items: center
+  }
+  
+  .kj p {
+      font-size: 22px
+  }
+  
+  .kj fieldset {
+      padding: 0
+  }
+  
+  .footer {
+      display: flex;
+      justify-content: center;
+      background-color: #0d0d0d;
+      margin-top: 20px;
+      font-size: 30px;
+      padding: 0 20px
+  }
+  
+  .footer .made p {
+      color: #791593;
+      font-size: 20px
+  }
+  
+  .footer .made p span {
+      color: #eeff00;
+      font-size: 16px
+  }
+  
+  * {
+      scrollbar-width: auto;
+      scrollbar-color: #0c0c0cba #0c0c0cba
+  }
+  
+  ::-webkit-scrollbar {
+      width: 16px;
+      display: none
+  }
+  
+  ::-webkit-scrollbar-track {
+      background: #0c0c0cba
+  }
+  
+  ::-webkit-scrollbar-thumb {
+      background-color: #0c0c0cba;
+      border: 3px solid #0c0c0cba
+  }
+  
+  [type=checkbox] {
+      display: none;
+      position: relative;
+      left: 15px;
+      top: -4px;
+      z-index: 0;
+      -webkit-appearance: none
+  }
+  
+  [type=checkbox]+label::before {
+      width: 15px;
+      height: 15px;
+      background-color: #fff;
+      display: block;
+      content: "";
+      float: left;
+      z-index: 5;
+      position: relative;
+      border-radius: 5px;
+      top: 9px
+  }
+  
+  input[type=checkbox]:checked+label::before {
+      background-color: #ffea00
+  }
+  
+  .menu-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center
+  }
+  
+  .menu-list p {
+      margin: 0 10px;
+      cursor: pointer;
+      font-size: 20px
+  }
+  
+  .menu-list .active {
+      color: #ffea00;
+      border: 1px solid #ffd70000;
+      border-bottom-color: #fff;
+      padding-bottom: 5px
+  }
+  
+  .disabled {
+      display: none
+  }
+  
+  ol {
+      padding-right: 40px
+  }
+  
+  li {
+      margin-bottom: 15px;
+      font-size: .95em
+  }
+  
+  .product {
+      position: relative;
+      overflow: hidden
+  }
+  
+  .attachment,
+  .header,
+  .price,
+  hr {
+      z-index: 999
+  }
+  
+  .product.paufpreis::before {
+      content: '';
+      position: absolute;
+      width: 100px;
+      background: linear-gradient(180deg, #ffea00, #797979);
+      height: 130%;
+      animation: 10s linear infinite rotBGimg;
+      transition: .2s linear;
+      right: 26%;
+      top: -69px;
+      filter: blur(7px)
+  }
+  
+  @keyframes rotBGimg {
+      from {
+          transform: rotate(0)
+      }
+  
+      to {
+          transform: rotate(360deg)
+      }
+  }
+  
+  .product.paufpreis::after {
+      content: '';
+      position: absolute;
+      background: #0c0c0c;
+      inset: 5px;
+      border-radius: 15px
+  }
+
+    </style>
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-background" width="3000" height="2000" preserveAspectRatio="xMidYMid" viewBox="0 0 3000 2000">
+      <g transform="translate(1500,1000) scale(1,1) translate(-1500,-1000)">
+        <style type="text/css">
+          @keyframes ld-speed-dash {
+            0% {
+              transform: translate(0, -3878.5512754639894px);
+            }
+  
+            100% {
+              transform: translate(0, 3878.5512754639894px);
+            }
+          }
+  
+          .ld.ld-speed-dash {
+            animation: ld-speed-dash 50s linear infinite;
+          }
+        </style>
+        <g transform="translate(1500,1000)">
+          <g style="transform:rotate(29deg)">
+            <line x1="535.2150853565149" x2="535.2150853565149" y1="0" y2="-256.2333333295868" stroke="#ffffff" stroke-width="1.709386035075968" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -31.9079730842744s;animation-duration:50s"></line>
+            <line x1="309.0996163762931" x2="309.0996163762931" y1="0" y2="-138.4287206334917" stroke="#ffffff" stroke-width="6.449588136442256" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -45.09235501081709s;animation-duration:25s"></line>
+            <line x1="-965.8783151946982" x2="-965.8783151946982" y1="0" y2="-85.11009628157346" stroke="#ffea00" stroke-width="1.1664358660028347" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -37.739453444979475s;animation-duration:50s"></line>
+            <line x1="-290.82428297683526" x2="-290.82428297683526" y1="0" y2="-184.59527200142892" stroke="#ffffff" stroke-width="5.675419816828666" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -27.839450777985018s;animation-duration:25s"></line>
+            <line x1="335.1272286879008" x2="335.1272286879008" y1="0" y2="-141.20365085300745" stroke="#ffffff" stroke-width="1.6314906085179643" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -33.72771360917975s;animation-duration:50s"></line>
+            <line x1="-1474.377868894729" x2="-1474.377868894729" y1="0" y2="-125.87084389701235" stroke="#ffea00" stroke-width="3.5619873051370243" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -12.79516704192174s;animation-duration:50s"></line>
+            <line x1="-47.317741096293496" x2="-47.317741096293496" y1="0" y2="-246.3022142184581" stroke="#ffffff" stroke-width="4.046342360572894" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -28.917173496706905s;animation-duration:25s"></line>
+            <line x1="-607.3551986936523" x2="-607.3551986936523" y1="0" y2="-269.4946506037238" stroke="#ffffff" stroke-width="0.6977348408834173" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -1.0895489420485571s;animation-duration:25s"></line>
+            <line x1="1153.4761193175734" x2="1153.4761193175734" y1="0" y2="-197.37154013568744" stroke="#ffea00" stroke-width="5.698055314654463" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -27.655604384405564s;animation-duration:25s"></line>
+            <line x1="823.7125431539594" x2="823.7125431539594" y1="0" y2="-202.9405296174013" stroke="#ffffff" stroke-width="6.502347817964932" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -12.25110331689544s;animation-duration:50s"></line>
+            <line x1="-995.0703020696121" x2="-995.0703020696121" y1="0" y2="-101.23534660186343" stroke="#ffea00" stroke-width="2.7272805795500146" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -46.476072022173696s;animation-duration:25s"></line>
+            <line x1="109.09401756332593" x2="109.09401756332593" y1="0" y2="-149.59111633434316" stroke="#ffffff" stroke-width="5.439323629292217" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -1.440754040358827s;animation-duration:25s"></line>
+            <line x1="-559.2185166728494" x2="-559.2185166728494" y1="0" y2="-194.14204591449123" stroke="#ffffff" stroke-width="5.433015813057413" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -8.149781417013902s;animation-duration:25s"></line>
+            <line x1="602.1137252234274" x2="602.1137252234274" y1="0" y2="-186.02369519518032" stroke="#ffea00" stroke-width="1.9545928625449558" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -30.83824820395613s;animation-duration:25s"></line>
+            <line x1="371.4489204488203" x2="371.4489204488203" y1="0" y2="-242.8663954341368" stroke="#ffea00" stroke-width="4.321934225102874" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -27.384471254973143s;animation-duration:50s"></line>
+            <line x1="-645.8080988682894" x2="-645.8080988682894" y1="0" y2="-110.3192429161119" stroke="#ffffff" stroke-width="3.8519412391831183" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -43.72277194075199s;animation-duration:50s"></line>
+            <line x1="442.1628493146079" x2="442.1628493146079" y1="0" y2="-203.81301574199358" stroke="#ffffff" stroke-width="1.6927071755245637" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -0.5833010029502095s;animation-duration:50s"></line>
+            <line x1="-645.2631567455502" x2="-645.2631567455502" y1="0" y2="-218.13956483737377" stroke="#ffea00" stroke-width="4.453484066529687" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -32.77378929699617s;animation-duration:25s"></line>
+            <line x1="1340.5721545164033" x2="1340.5721545164033" y1="0" y2="-212.99438347202894" stroke="#ffea00" stroke-width="4.277761452507328" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -9.29015768102157s;animation-duration:25s"></line>
+            <line x1="-160.63064869824495" x2="-160.63064869824495" y1="0" y2="-86.10636028089951" stroke="#ffffff" stroke-width="1.1005374365266112" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -38.91706503487799s;animation-duration:50s"></line>
+            <line x1="-908.8575681008781" x2="-908.8575681008781" y1="0" y2="-192.70499202241194" stroke="#ffea00" stroke-width="6.647183698000718" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -38.4547477103147s;animation-duration:50s"></line>
+            <line x1="1325.9417910311188" x2="1325.9417910311188" y1="0" y2="-199.52981832266573" stroke="#ffffff" stroke-width="6.588782279414848" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -11.304690345910295s;animation-duration:50s"></line>
+            <line x1="1328.568828834883" x2="1328.568828834883" y1="0" y2="-221.25797304052733" stroke="#ffffff" stroke-width="2.3483148257985116" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -0.09066368494717869s;animation-duration:25s"></line>
+            <line x1="-1257.2815063817727" x2="-1257.2815063817727" y1="0" y2="-135.68701617402704" stroke="#ffffff" stroke-width="5.040967125876415" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -46.0777206408131s;animation-duration:25s"></line>
+            <line x1="958.2619151152685" x2="958.2619151152685" y1="0" y2="-126.9581603917378" stroke="#ffea00" stroke-width="5.784921583519231" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -45.35478979534506s;animation-duration:50s"></line>
+            <line x1="-1224.798133740961" x2="-1224.798133740961" y1="0" y2="-139.32045268091622" stroke="#ffea00" stroke-width="5.603991048652833" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -35.32195349756644s;animation-duration:25s"></line>
+            <line x1="1433.1944377739724" x2="1433.1944377739724" y1="0" y2="-250.24045216382845" stroke="#ffea00" stroke-width="0.6254523002753579" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -41.16684683853343s;animation-duration:25s"></line>
+            <line x1="-1371.3534148089188" x2="-1371.3534148089188" y1="0" y2="-221.65851521831564" stroke="#ffffff" stroke-width="0.5769879295042082" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -34.25904591484446s;animation-duration:25s"></line>
+            <line x1="1445.3654689886882" x2="1445.3654689886882" y1="0" y2="-112.26896539652077" stroke="#ffea00" stroke-width="5.37958788630961" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -38.978197071600086s;animation-duration:50s"></line>
+            <line x1="-1128.7618265644924" x2="-1128.7618265644924" y1="0" y2="-257.9982447100093" stroke="#ffea00" stroke-width="4.789678526255658" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -29.276098371051596s;animation-duration:50s"></line>
+            <line x1="166.96764767625027" x2="166.96764767625027" y1="0" y2="-110.70935514663734" stroke="#ffea00" stroke-width="2.9527892896834884" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -0.8685253083570932s;animation-duration:25s"></line>
+            <line x1="-914.8336059141274" x2="-914.8336059141274" y1="0" y2="-263.1857086142603" stroke="#ffea00" stroke-width="4.958477628029501" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -2.8456664027833534s;animation-duration:50s"></line>
+            <line x1="1233.6598072438514" x2="1233.6598072438514" y1="0" y2="-222.4908310916974" stroke="#ffffff" stroke-width="4.271999330665744" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -10.610927836844109s;animation-duration:25s"></line>
+            <line x1="-112.7893535454163" x2="-112.7893535454163" y1="0" y2="-113.7209169896876" stroke="#ffea00" stroke-width="6.144433937260699" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -44.8439204227983s;animation-duration:50s"></line>
+            <line x1="131.6313134436229" x2="131.6313134436229" y1="0" y2="-235.55503621970337" stroke="#ffffff" stroke-width="2.912851768619162" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -43.46668195167448s;animation-duration:25s"></line>
+            <line x1="466.5836246059025" x2="466.5836246059025" y1="0" y2="-181.1595670300452" stroke="#ffffff" stroke-width="1.3585515328411313" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -21.697180196162268s;animation-duration:25s"></line>
+            <line x1="1034.3743960119002" x2="1034.3743960119002" y1="0" y2="-180.39199219415536" stroke="#ffffff" stroke-width="1.219490017160879" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -3.2342010691437273s;animation-duration:25s"></line>
+            <line x1="-1077.9564579831185" x2="-1077.9564579831185" y1="0" y2="-125.72979832561265" stroke="#ffffff" stroke-width="6.095418147410536" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -41.19404432173134s;animation-duration:50s"></line>
+            <line x1="755.8416615459478" x2="755.8416615459478" y1="0" y2="-145.3613037135433" stroke="#ffea00" stroke-width="6.14628848203406" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -18.582526294121415s;animation-duration:25s"></line>
+            <line x1="368.45938918251784" x2="368.45938918251784" y1="0" y2="-177.78850076283027" stroke="#ffea00" stroke-width="3.062484622123624" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -13.631368967843848s;animation-duration:50s"></line>
+            <line x1="-275.1827175357866" x2="-275.1827175357866" y1="0" y2="-257.65375350921624" stroke="#ffea00" stroke-width="5.435523366088236" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -49.90921059663196s;animation-duration:50s"></line>
+            <line x1="330.2376965299691" x2="330.2376965299691" y1="0" y2="-212.02544369733096" stroke="#ffffff" stroke-width="4.155457388755679" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -40.145962823051164s;animation-duration:50s"></line>
+            <line x1="1364.7821967464215" x2="1364.7821967464215" y1="0" y2="-219.25067803903138" stroke="#ffea00" stroke-width="5.53856550989554" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -43.7082062548806s;animation-duration:50s"></line>
+            <line x1="134.83340470931182" x2="134.83340470931182" y1="0" y2="-270.89129860276614" stroke="#ffea00" stroke-width="5.613071653951648" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -18.507425294655043s;animation-duration:25s"></line>
+            <line x1="576.0527212203206" x2="576.0527212203206" y1="0" y2="-261.3385244130667" stroke="#ffffff" stroke-width="1.4939942891069544" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -10.85574383677319s;animation-duration:50s"></line>
+            <line x1="-147.27361669445747" x2="-147.27361669445747" y1="0" y2="-240.59344085553312" stroke="#ffea00" stroke-width="3.007941703950911" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -15.20998720749882s;animation-duration:25s"></line>
+            <line x1="-712.8350151839385" x2="-712.8350151839385" y1="0" y2="-263.51533359951145" stroke="#ffea00" stroke-width="2.674104855935256" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -34.13699224118542s;animation-duration:50s"></line>
+            <line x1="-660.4969677039895" x2="-660.4969677039895" y1="0" y2="-125.97271740269213" stroke="#ffea00" stroke-width="5.160091689637367" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -26.07460747163357s;animation-duration:50s"></line>
+            <line x1="-827.4233028404788" x2="-827.4233028404788" y1="0" y2="-109.53097878879903" stroke="#ffea00" stroke-width="0.5352399186367117" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -21.594179796930025s;animation-duration:25s"></line>
+            <line x1="1113.3054454132762" x2="1113.3054454132762" y1="0" y2="-156.43931996744112" stroke="#ffffff" stroke-width="4.502429873562401" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -10.151786559821273s;animation-duration:25s"></line>
+            <line x1="-868.4808157291684" x2="-868.4808157291684" y1="0" y2="-255.0953937631986" stroke="#ffffff" stroke-width="5.298177726862789" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -14.447975791956068s;animation-duration:25s"></line>
+            <line x1="391.81481088756055" x2="391.81481088756055" y1="0" y2="-138.14887340016563" stroke="#ffffff" stroke-width="1.3744571260829632" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -8.285722454978872s;animation-duration:50s"></line>
+            <line x1="-1445.7569159329798" x2="-1445.7569159329798" y1="0" y2="-114.4385888180948" stroke="#ffffff" stroke-width="1.230956930431307" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -9.58798925196035s;animation-duration:25s"></line>
+            <line x1="-699.4876075094825" x2="-699.4876075094825" y1="0" y2="-218.19134170300876" stroke="#ffea00" stroke-width="6.307243259271133" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -40.207481718081425s;animation-duration:50s"></line>
+            <line x1="53.532537465869055" x2="53.532537465869055" y1="0" y2="-183.54920180262496" stroke="#ffea00" stroke-width="2.398675649219004" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -45.813486259171576s;animation-duration:50s"></line>
+            <line x1="-1422.0895775016002" x2="-1422.0895775016002" y1="0" y2="-244.29701863283663" stroke="#ffffff" stroke-width="1.386411234987779" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -19.363371878213254s;animation-duration:25s"></line>
+            <line x1="-1429.999437123126" x2="-1429.999437123126" y1="0" y2="-264.7739266458568" stroke="#ffffff" stroke-width="3.435416045082408" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -23.610975898466346s;animation-duration:50s"></line>
+            <line x1="468.1615812683984" x2="468.1615812683984" y1="0" y2="-178.77912614775494" stroke="#ffea00" stroke-width="5.668251423142066" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -15.276351658209197s;animation-duration:50s"></line>
+            <line x1="-1195.8295298679052" x2="-1195.8295298679052" y1="0" y2="-216.63537102385513" stroke="#ffffff" stroke-width="6.336976590341204" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -23.444277303123727s;animation-duration:25s"></line>
+            <line x1="-1108.8154117315007" x2="-1108.8154117315007" y1="0" y2="-91.42322943904873" stroke="#ffea00" stroke-width="0.16963594422934442" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -15.635468848140832s;animation-duration:25s"></line>
+            <line x1="1282.8863413935715" x2="1282.8863413935715" y1="0" y2="-193.73649091751713" stroke="#ffea00" stroke-width="0.9778714801495728" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -38.01745730502215s;animation-duration:50s"></line>
+            <line x1="544.0941140355235" x2="544.0941140355235" y1="0" y2="-101.40878833062139" stroke="#ffffff" stroke-width="6.109755105251046" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -29.93770057390116s;animation-duration:25s"></line>
+            <line x1="-936.1143727148764" x2="-936.1143727148764" y1="0" y2="-163.2742570067506" stroke="#ffffff" stroke-width="1.181619380536936" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -12.782996098700883s;animation-duration:50s"></line>
+            <line x1="-1110.770334345414" x2="-1110.770334345414" y1="0" y2="-271.8073830112185" stroke="#ffea00" stroke-width="2.2554442477789856" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -30.818450168268683s;animation-duration:50s"></line>
+            <line x1="-963.8298237635665" x2="-963.8298237635665" y1="0" y2="-192.04840933103918" stroke="#ffea00" stroke-width="3.3364870543160077" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -9.044280074155264s;animation-duration:50s"></line>
+            <line x1="974.1082088465291" x2="974.1082088465291" y1="0" y2="-225.78431707933805" stroke="#ffea00" stroke-width="1.956265676509038" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -41.062706348665024s;animation-duration:25s"></line>
+            <line x1="87.31670802596581" x2="87.31670802596581" y1="0" y2="-213.4623485514419" stroke="#ffffff" stroke-width="4.626456982607249" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -22.501774570654486s;animation-duration:50s"></line>
+            <line x1="-297.62891757017695" x2="-297.62891757017695" y1="0" y2="-258.85106925150774" stroke="#ffffff" stroke-width="3.636710113935994" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -9.959961621338476s;animation-duration:50s"></line>
+            <line x1="17.277936086238732" x2="17.277936086238732" y1="0" y2="-263.9468201286961" stroke="#ffffff" stroke-width="0.9458555325131172" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -48.963309342785735s;animation-duration:25s"></line>
+            <line x1="1053.5308650654533" x2="1053.5308650654533" y1="0" y2="-95.42454769571748" stroke="#ffffff" stroke-width="0.5466402523447171" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -10.378717418264094s;animation-duration:50s"></line>
+            <line x1="387.8368363658342" x2="387.8368363658342" y1="0" y2="-112.17987273406325" stroke="#ffea00" stroke-width="0.5255498493064806" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -27.002714983705033s;animation-duration:25s"></line>
+            <line x1="-985.7754427382972" x2="-985.7754427382972" y1="0" y2="-161.37021271972696" stroke="#ffffff" stroke-width="5.76609434122962" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -4.236680578331342s;animation-duration:25s"></line>
+            <line x1="1113.3180556132404" x2="1113.3180556132404" y1="0" y2="-146.7585097522849" stroke="#ffea00" stroke-width="5.489179909491165" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -12.771903244772364s;animation-duration:25s"></line>
+            <line x1="-856.1308253763538" x2="-856.1308253763538" y1="0" y2="-259.15892703662894" stroke="#ffea00" stroke-width="4.900662524656975" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -31.958676417649233s;animation-duration:50s"></line>
+            <line x1="-1441.7278889371894" x2="-1441.7278889371894" y1="0" y2="-97.0478742267232" stroke="#ffea00" stroke-width="0.15165244206257444" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -43.59978782639976s;animation-duration:25s"></line>
+            <line x1="-481.209637189989" x2="-481.209637189989" y1="0" y2="-86.26316223271107" stroke="#ffffff" stroke-width="5.402903356522423" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -17.354506692974102s;animation-duration:25s"></line>
+            <line x1="-1150.5977293114354" x2="-1150.5977293114354" y1="0" y2="-212.0450375526314" stroke="#ffea00" stroke-width="5.476249106160725" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -38.85453011545174s;animation-duration:50s"></line>
+            <line x1="1042.48497631288" x2="1042.48497631288" y1="0" y2="-116.0604218920368" stroke="#ffea00" stroke-width="5.166477040356137" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -14.320050729239853s;animation-duration:25s"></line>
+            <line x1="1003.393629285698" x2="1003.393629285698" y1="0" y2="-117.31104823814923" stroke="#ffffff" stroke-width="5.777225746117794" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -48.45789809114606s;animation-duration:50s"></line>
+            <line x1="1225.3159356957792" x2="1225.3159356957792" y1="0" y2="-187.71308776353777" stroke="#ffffff" stroke-width="0.9571328993679552" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -42.248262046857754s;animation-duration:25s"></line>
+            <line x1="-388.4580040494481" x2="-388.4580040494481" y1="0" y2="-220.87299305972596" stroke="#ffea00" stroke-width="4.998952846887267" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -36.87948265331913s;animation-duration:50s"></line>
+            <line x1="-200.5128260095177" x2="-200.5128260095177" y1="0" y2="-96.70658610299877" stroke="#ffffff" stroke-width="2.183134521941391" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -13.048022220142318s;animation-duration:50s"></line>
+            <line x1="-1139.242404030197" x2="-1139.242404030197" y1="0" y2="-220.13842089490552" stroke="#ffea00" stroke-width="1.7198610364027125" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -26.95867178583442s;animation-duration:25s"></line>
+            <line x1="578.2974306596411" x2="578.2974306596411" y1="0" y2="-158.7023421846931" stroke="#ffffff" stroke-width="0.7962570174297179" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -9.69839046222174s;animation-duration:25s"></line>
+            <line x1="267.8190356748082" x2="267.8190356748082" y1="0" y2="-204.3824306063368" stroke="#ffffff" stroke-width="0.025697066240648048" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -11.202691241035446s;animation-duration:50s"></line>
+            <line x1="872.5766269699118" x2="872.5766269699118" y1="0" y2="-117.5922868282768" stroke="#ffea00" stroke-width="4.302008734981502" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -4.125086017383317s;animation-duration:25s"></line>
+            <line x1="1357.6951608494553" x2="1357.6951608494553" y1="0" y2="-110.1964762801747" stroke="#ffea00" stroke-width="5.751796614939283" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -5.823919966999768s;animation-duration:50s"></line>
+            <line x1="-383.7986099384045" x2="-383.7986099384045" y1="0" y2="-252.1973247082445" stroke="#ffffff" stroke-width="4.963372820969469" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -41.6245976699646s;animation-duration:25s"></line>
+            <line x1="-466.6409177922137" x2="-466.6409177922137" y1="0" y2="-170.21087823990737" stroke="#ffffff" stroke-width="3.615675142976224" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -0.25758911613967816s;animation-duration:25s"></line>
+            <line x1="72.0664080675837" x2="72.0664080675837" y1="0" y2="-248.01263248435492" stroke="#ffffff" stroke-width="3.016692995912276" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -45.35352184913549s;animation-duration:50s"></line>
+            <line x1="1406.1039281443502" x2="1406.1039281443502" y1="0" y2="-208.40934104554086" stroke="#ffffff" stroke-width="2.098891110362595" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -16.98242226195076s;animation-duration:50s"></line>
+            <line x1="1290.546845369344" x2="1290.546845369344" y1="0" y2="-221.45334864609694" stroke="#ffea00" stroke-width="1.3608869113430455" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -25.483065311183715s;animation-duration:50s"></line>
+            <line x1="637.3678086364116" x2="637.3678086364116" y1="0" y2="-179.9168121398675" stroke="#ffffff" stroke-width="0.48403932396161936" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -38.8045575208127s;animation-duration:50s"></line>
+            <line x1="-966.7017023139373" x2="-966.7017023139373" y1="0" y2="-235.16158284940184" stroke="#ffea00" stroke-width="1.7388428181542837" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -23.62514139296423s;animation-duration:50s"></line>
+            <line x1="459.0183750069701" x2="459.0183750069701" y1="0" y2="-157.74781818848732" stroke="#ffffff" stroke-width="2.585005232892092" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -4.206314749410344s;animation-duration:50s"></line>
+            <line x1="-672.5084119249578" x2="-672.5084119249578" y1="0" y2="-180.56950436021202" stroke="#ffea00" stroke-width="6.68187422953029" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -22.69397733253139s;animation-duration:25s"></line>
+            <line x1="-1372.158979441586" x2="-1372.158979441586" y1="0" y2="-103.21452482256817" stroke="#ffffff" stroke-width="3.096907257062147" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -23.984663984419562s;animation-duration:50s"></line>
+            <line x1="500.8869554760931" x2="500.8869554760931" y1="0" y2="-159.40140681538406" stroke="#ffea00" stroke-width="1.9354805782726632" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -35.76487890658292s;animation-duration:50s"></line>
+            <line x1="-1459.5867112717588" x2="-1459.5867112717588" y1="0" y2="-128.8734128508184" stroke="#ffffff" stroke-width="3.214603541493235" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -44.31800319625023s;animation-duration:25s"></line>
+            <line x1="1044.4465294241131" x2="1044.4465294241131" y1="0" y2="-225.97109813295214" stroke="#ffffff" stroke-width="3.352724032865139" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -6.7605109332556035s;animation-duration:25s"></line>
+            <line x1="-338.6724969487249" x2="-338.6724969487249" y1="0" y2="-104.44275771432315" stroke="#ffffff" stroke-width="5.4719506500080906" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -1.0589672154610819s;animation-duration:50s"></line>
+            <line x1="-739.4464755538966" x2="-739.4464755538966" y1="0" y2="-90.28010100860028" stroke="#ffea00" stroke-width="5.6187178826457425" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -41.31131233251215s;animation-duration:25s"></line>
+            <line x1="-714.579674540154" x2="-714.579674540154" y1="0" y2="-92.40496372838966" stroke="#ffffff" stroke-width="1.024579810310661" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -36.065109590795565s;animation-duration:50s"></line>
+            <line x1="-1251.3145333978732" x2="-1251.3145333978732" y1="0" y2="-80.84757364109676" stroke="#ffea00" stroke-width="1.1285122739773714" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -38.45219550875905s;animation-duration:25s"></line>
+            <line x1="-5.563851561215083" x2="-5.563851561215083" y1="0" y2="-119.99622990903273" stroke="#ffea00" stroke-width="4.915883976542455" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -4.138766052821407s;animation-duration:50s"></line>
+            <line x1="308.8379197218365" x2="308.8379197218365" y1="0" y2="-113.90868587889737" stroke="#ffffff" stroke-width="2.997125380034278" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -37.589289964257354s;animation-duration:25s"></line>
+            <line x1="1055.8223351823826" x2="1055.8223351823826" y1="0" y2="-202.26102280243023" stroke="#ffffff" stroke-width="6.090548838687113" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -6.111057020934074s;animation-duration:50s"></line>
+            <line x1="672.5087913549132" x2="672.5087913549132" y1="0" y2="-196.10600023250032" stroke="#ffffff" stroke-width="4.751146699775852" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -6.477648099135924s;animation-duration:25s"></line>
+            <line x1="-248.35600650567247" x2="-248.35600650567247" y1="0" y2="-145.59570609493738" stroke="#ffea00" stroke-width="0.7021343202994477" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -22.370746415037978s;animation-duration:25s"></line>
+            <line x1="-701.9458419122309" x2="-701.9458419122309" y1="0" y2="-166.8937988092926" stroke="#ffffff" stroke-width="6.612601260715019" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -46.43999864090947s;animation-duration:50s"></line>
+            <line x1="609.8731621012747" x2="609.8731621012747" y1="0" y2="-217.54803928960342" stroke="#ffea00" stroke-width="3.2267565667243057" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -49.41058391460946s;animation-duration:25s"></line>
+            <line x1="-152.3328955693024" x2="-152.3328955693024" y1="0" y2="-137.39994848874247" stroke="#ffea00" stroke-width="2.666786869969132" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -47.28008469308419s;animation-duration:25s"></line>
+            <line x1="-453.6890384169594" x2="-453.6890384169594" y1="0" y2="-177.51873994571872" stroke="#ffea00" stroke-width="0.11284499135491873" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -44.132696844656785s;animation-duration:50s"></line>
+            <line x1="6.052073310504946" x2="6.052073310504946" y1="0" y2="-198.31682632368717" stroke="#ffffff" stroke-width="0.3203877755614937" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -30.56774833183785s;animation-duration:50s"></line>
+            <line x1="-1418.6770527700928" x2="-1418.6770527700928" y1="0" y2="-177.70288744543274" stroke="#ffea00" stroke-width="2.3462458640851365" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -10.441377098318105s;animation-duration:25s"></line>
+            <line x1="-120.21845172932456" x2="-120.21845172932456" y1="0" y2="-246.08194536119248" stroke="#ffffff" stroke-width="1.3550999548591676" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -36.98186400348364s;animation-duration:25s"></line>
+            <line x1="-1369.58958775512" x2="-1369.58958775512" y1="0" y2="-265.28476813641726" stroke="#ffffff" stroke-width="3.7506643799546913" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -18.572188933783995s;animation-duration:50s"></line>
+            <line x1="-1385.888263287803" x2="-1385.888263287803" y1="0" y2="-93.90622220048306" stroke="#ffea00" stroke-width="6.6586714928722115" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -17.06643530555201s;animation-duration:25s"></line>
+            <line x1="1064.8839720701712" x2="1064.8839720701712" y1="0" y2="-231.25781986753947" stroke="#ffea00" stroke-width="4.248029019625133" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -14.166305570513659s;animation-duration:50s"></line>
+            <line x1="821.8663034311029" x2="821.8663034311029" y1="0" y2="-208.90144606622349" stroke="#ffffff" stroke-width="1.8112129972697997" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -1.5302221960266982s;animation-duration:25s"></line>
+            <line x1="1404.8113276261222" x2="1404.8113276261222" y1="0" y2="-233.57305504319794" stroke="#ffea00" stroke-width="0.21702413183484817" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -34.71713013043587s;animation-duration:50s"></line>
+            <line x1="-745.7954745940239" x2="-745.7954745940239" y1="0" y2="-220.92921563867435" stroke="#ffffff" stroke-width="0.47042562012061073" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -19.71414567493127s;animation-duration:50s"></line>
+            <line x1="68.08293520805697" x2="68.08293520805697" y1="0" y2="-212.60232136030606" stroke="#ffea00" stroke-width="4.107112450298704" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -23.727595029396742s;animation-duration:50s"></line>
+            <line x1="-65.47229389244657" x2="-65.47229389244657" y1="0" y2="-187.98658509679393" stroke="#ffea00" stroke-width="5.122578658140967" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -43.68531746770613s;animation-duration:25s"></line>
+            <line x1="-1265.1890544259015" x2="-1265.1890544259015" y1="0" y2="-262.22647791054305" stroke="#ffea00" stroke-width="0.3605169809125032" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -8.664259222378801s;animation-duration:25s"></line>
+            <line x1="-698.0446063448103" x2="-698.0446063448103" y1="0" y2="-260.7213683701898" stroke="#ffea00" stroke-width="0.3340828009930334" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -0.1344341705647678s;animation-duration:50s"></line>
+            <line x1="158.80112027996663" x2="158.80112027996663" y1="0" y2="-171.11541141352683" stroke="#ffffff" stroke-width="3.0831597106138857" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -24.215698133533614s;animation-duration:25s"></line>
+            <line x1="859.46866002435" x2="859.46866002435" y1="0" y2="-147.73767244791782" stroke="#ffffff" stroke-width="4.781325226164967" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -31.744830518998967s;animation-duration:25s"></line>
+            <line x1="-542.259921075094" x2="-542.259921075094" y1="0" y2="-87.00432753364437" stroke="#ffea00" stroke-width="2.189857393233858" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -1.1550910550276128s;animation-duration:25s"></line>
+            <line x1="-635.2321333914097" x2="-635.2321333914097" y1="0" y2="-84.85892028301978" stroke="#ffffff" stroke-width="3.6265510685976707" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -20.048889487443898s;animation-duration:50s"></line>
+            <line x1="-234.5598158229143" x2="-234.5598158229143" y1="0" y2="-246.67861031347624" stroke="#ffea00" stroke-width="2.807130912165527" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -31.17326911507563s;animation-duration:50s"></line>
+            <line x1="-14.238233794293675" x2="-14.238233794293675" y1="0" y2="-252.6812519081652" stroke="#ffea00" stroke-width="6.072279669925217" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -38.98241666615112s;animation-duration:25s"></line>
+            <line x1="996.3255451230743" x2="996.3255451230743" y1="0" y2="-244.34963239133057" stroke="#ffea00" stroke-width="6.134050740142809" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -12.240812629078867s;animation-duration:25s"></line>
+            <line x1="-1235.8407956357473" x2="-1235.8407956357473" y1="0" y2="-246.12387888657173" stroke="#ffea00" stroke-width="6.44013343871324" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -10.836658138087806s;animation-duration:25s"></line>
+            <line x1="-23.17467310928878" x2="-23.17467310928878" y1="0" y2="-206.74443110006587" stroke="#ffea00" stroke-width="5.745904105100167" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -36.21037858111357s;animation-duration:25s"></line>
+            <line x1="-1130.2301675642448" x2="-1130.2301675642448" y1="0" y2="-129.93453113996952" stroke="#ffea00" stroke-width="5.637265384870614" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -39.446873510824084s;animation-duration:25s"></line>
+            <line x1="1011.8785073352559" x2="1011.8785073352559" y1="0" y2="-249.33558947595282" stroke="#ffea00" stroke-width="3.9997913236059683" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -47.12411825861565s;animation-duration:50s"></line>
+            <line x1="189.82649463629198" x2="189.82649463629198" y1="0" y2="-95.46430436037372" stroke="#ffea00" stroke-width="6.597126548752416" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -21.988450326942775s;animation-duration:50s"></line>
+            <line x1="617.2756159634067" x2="617.2756159634067" y1="0" y2="-238.28546038207986" stroke="#ffffff" stroke-width="0.3065068285155031" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -22.287683805344926s;animation-duration:25s"></line>
+            <line x1="770.0322396762964" x2="770.0322396762964" y1="0" y2="-261.1608733646061" stroke="#ffea00" stroke-width="4.616727821612693" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -8.648258084213333s;animation-duration:25s"></line>
+            <line x1="974.2599810907342" x2="974.2599810907342" y1="0" y2="-200.2817003670711" stroke="#ffea00" stroke-width="3.564723336626792" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -28.666288567512577s;animation-duration:50s"></line>
+            <line x1="-1043.0276313097365" x2="-1043.0276313097365" y1="0" y2="-235.87374105023042" stroke="#ffffff" stroke-width="4.742243723111233" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -19.44758421709849s;animation-duration:50s"></line>
+            <line x1="-830.9740644524688" x2="-830.9740644524688" y1="0" y2="-192.07496679304327" stroke="#ffea00" stroke-width="5.425911731799757" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -1.6008668452749841s;animation-duration:50s"></line>
+            <line x1="15.236589969388037" x2="15.236589969388037" y1="0" y2="-229.16346994440684" stroke="#ffffff" stroke-width="5.335998860328374" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -35.60801698840176s;animation-duration:25s"></line>
+            <line x1="514.5577055302168" x2="514.5577055302168" y1="0" y2="-169.81383601010168" stroke="#ffffff" stroke-width="1.6584725395243232" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -12.83486273063108s;animation-duration:50s"></line>
+            <line x1="1372.0810066864215" x2="1372.0810066864215" y1="0" y2="-219.88662511808832" stroke="#ffea00" stroke-width="2.686254724935299" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -38.383249781944365s;animation-duration:50s"></line>
+            <line x1="656.7272810014489" x2="656.7272810014489" y1="0" y2="-209.19942813425365" stroke="#ffffff" stroke-width="1.4913893555572622" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -10.8667529832416s;animation-duration:25s"></line>
+            <line x1="-728.6657911347424" x2="-728.6657911347424" y1="0" y2="-252.22604824357094" stroke="#ffffff" stroke-width="5.084136895214249" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -11.988314169806403s;animation-duration:25s"></line>
+            <line x1="-363.32644299085695" x2="-363.32644299085695" y1="0" y2="-200.0600595442427" stroke="#ffffff" stroke-width="2.185681623635071" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -22.30765012531909s;animation-duration:25s"></line>
+            <line x1="123.38554555756409" x2="123.38554555756409" y1="0" y2="-123.79483021582917" stroke="#ffea00" stroke-width="4.125943557121007" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -25.47751934787802s;animation-duration:50s"></line>
+            <line x1="135.4063274890158" x2="135.4063274890158" y1="0" y2="-220.29187768438032" stroke="#ffffff" stroke-width="3.2228240359059797" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -3.9036253328091575s;animation-duration:50s"></line>
+            <line x1="-437.7646137702327" x2="-437.7646137702327" y1="0" y2="-272.5909233153916" stroke="#ffffff" stroke-width="6.511398457516764" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -28.409945803896306s;animation-duration:25s"></line>
+            <line x1="1067.19484679023" x2="1067.19484679023" y1="0" y2="-257.68499344898976" stroke="#ffea00" stroke-width="4.768280325417587" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -44.42539381679573s;animation-duration:25s"></line>
+            <line x1="-814.9947867200945" x2="-814.9947867200945" y1="0" y2="-253.21347283345162" stroke="#ffffff" stroke-width="1.5237911891656282" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -43.63068022182992s;animation-duration:50s"></line>
+            <line x1="-219.4469079221031" x2="-219.4469079221031" y1="0" y2="-95.0940002068372" stroke="#ffffff" stroke-width="5.919976425816392" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -4.620058722070186s;animation-duration:50s"></line>
+            <line x1="-535.0047622914523" x2="-535.0047622914523" y1="0" y2="-184.9502595909256" stroke="#ffea00" stroke-width="1.642270614935414" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -27.93492634081318s;animation-duration:25s"></line>
+            <line x1="-582.1093874033132" x2="-582.1093874033132" y1="0" y2="-89.54298489801631" stroke="#ffea00" stroke-width="3.355804162006325" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -7.92209162024764s;animation-duration:50s"></line>
+            <line x1="-1475.352222313521" x2="-1475.352222313521" y1="0" y2="-223.83506263645177" stroke="#ffea00" stroke-width="1.2570807480528416" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -46.464096996047445s;animation-duration:25s"></line>
+            <line x1="129.50813587558096" x2="129.50813587558096" y1="0" y2="-133.1765508707494" stroke="#ffffff" stroke-width="3.3951562086586122" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -17.854601744643706s;animation-duration:25s"></line>
+            <line x1="-1064.8589485708067" x2="-1064.8589485708067" y1="0" y2="-257.21476753391926" stroke="#ffea00" stroke-width="4.377523154304482" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -21.377741901475144s;animation-duration:25s"></line>
+            <line x1="-112.656169361387" x2="-112.656169361387" y1="0" y2="-213.9910800108389" stroke="#ffea00" stroke-width="2.8490045909338657" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -20.259352828899146s;animation-duration:25s"></line>
+            <line x1="989.4113252624214" x2="989.4113252624214" y1="0" y2="-109.24755785813076" stroke="#ffffff" stroke-width="6.0614695128086655" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -40.767935141269795s;animation-duration:25s"></line>
+            <line x1="-1438.6864721522986" x2="-1438.6864721522986" y1="0" y2="-161.14605659652443" stroke="#ffea00" stroke-width="3.2353178552003223" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -24.55055716084279s;animation-duration:50s"></line>
+            <line x1="-1206.4239767113474" x2="-1206.4239767113474" y1="0" y2="-270.2693940352053" stroke="#ffffff" stroke-width="2.9602990367771467" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -29.02452638530033s;animation-duration:25s"></line>
+            <line x1="-448.6815804436737" x2="-448.6815804436737" y1="0" y2="-172.31136374325905" stroke="#ffffff" stroke-width="5.747774080535852" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -7.9996490138054765s;animation-duration:50s"></line>
+            <line x1="-185.4831029635222" x2="-185.4831029635222" y1="0" y2="-166.8717126831994" stroke="#ffea00" stroke-width="6.664920573980311" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -29.01622878272081s;animation-duration:25s"></line>
+            <line x1="1027.3982095389779" x2="1027.3982095389779" y1="0" y2="-161.12753027142165" stroke="#ffea00" stroke-width="4.906991692165701" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -5.729845185311199s;animation-duration:25s"></line>
+            <line x1="658.897917467405" x2="658.897917467405" y1="0" y2="-203.5814451423686" stroke="#ffffff" stroke-width="0.9066547034556649" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -45.187057391611475s;animation-duration:50s"></line>
+            <line x1="1080.3520783306387" x2="1080.3520783306387" y1="0" y2="-150.03101503600763" stroke="#ffea00" stroke-width="2.302705543222653" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -2.5619293857332637s;animation-duration:25s"></line>
+            <line x1="1262.9976960960857" x2="1262.9976960960857" y1="0" y2="-118.95208505594027" stroke="#ffffff" stroke-width="3.118630967929498" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -44.648386404231395s;animation-duration:25s"></line>
+            <line x1="-509.23759292156956" x2="-509.23759292156956" y1="0" y2="-95.60274653600734" stroke="#ffffff" stroke-width="3.9131301277376997" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -18.422675575395118s;animation-duration:25s"></line>
+            <line x1="-1402.2976645290828" x2="-1402.2976645290828" y1="0" y2="-221.8715541239386" stroke="#ffffff" stroke-width="1.6468424390376033" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -16.542885738193245s;animation-duration:25s"></line>
+            <line x1="984.0186372052659" x2="984.0186372052659" y1="0" y2="-175.32249633155902" stroke="#ffffff" stroke-width="1.3421786950374905" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -16.451054779684192s;animation-duration:25s"></line>
+            <line x1="1304.0722867809945" x2="1304.0722867809945" y1="0" y2="-227.32823038501655" stroke="#ffea00" stroke-width="6.031794932221852" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -34.12745856409401s;animation-duration:50s"></line>
+            <line x1="318.5582543424907" x2="318.5582543424907" y1="0" y2="-146.5660609795837" stroke="#ffea00" stroke-width="5.225140057248783" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -5.650542711100792s;animation-duration:25s"></line>
+            <line x1="1274.5868032574995" x2="1274.5868032574995" y1="0" y2="-219.64688661977226" stroke="#ffffff" stroke-width="0.6198278676368099" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -38.833531373994965s;animation-duration:25s"></line>
+            <line x1="-641.787374045161" x2="-641.787374045161" y1="0" y2="-128.11912898932354" stroke="#ffffff" stroke-width="4.567409261691658" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -34.0126427737816s;animation-duration:25s"></line>
+            <line x1="-571.3939688845753" x2="-571.3939688845753" y1="0" y2="-245.39858089484085" stroke="#ffea00" stroke-width="3.6869807030975967" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -4.660449777158082s;animation-duration:25s"></line>
+            <line x1="222.42224788477594" x2="222.42224788477594" y1="0" y2="-154.64841812067115" stroke="#ffffff" stroke-width="3.1823432765516517" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -46.496057594564284s;animation-duration:25s"></line>
+            <line x1="1467.6491974850453" x2="1467.6491974850453" y1="0" y2="-169.17963918103018" stroke="#ffea00" stroke-width="3.5834334318198273" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -31.34313969800051s;animation-duration:25s"></line>
+            <line x1="-671.1798662760146" x2="-671.1798662760146" y1="0" y2="-117.95276137100882" stroke="#ffea00" stroke-width="3.5724279855178684" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -0.9410181514055704s;animation-duration:25s"></line>
+            <line x1="1367.1140421162877" x2="1367.1140421162877" y1="0" y2="-80.86214329223617" stroke="#ffffff" stroke-width="3.384373085857859" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -30.07427810495513s;animation-duration:50s"></line>
+            <line x1="-1267.41600879403" x2="-1267.41600879403" y1="0" y2="-87.78135981968452" stroke="#ffea00" stroke-width="3.0433087179622786" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -14.433094494068621s;animation-duration:50s"></line>
+            <line x1="-453.5227668981647" x2="-453.5227668981647" y1="0" y2="-238.3071256276461" stroke="#ffea00" stroke-width="3.4848525997851527" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -41.6174784465553s;animation-duration:50s"></line>
+            <line x1="1159.8106175725075" x2="1159.8106175725075" y1="0" y2="-271.23477675644983" stroke="#ffffff" stroke-width="4.890808836396162" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -18.682684566787287s;animation-duration:25s"></line>
+            <line x1="1088.7968705595565" x2="1088.7968705595565" y1="0" y2="-202.48456466932387" stroke="#ffea00" stroke-width="4.416640096816179" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -45.37383948827897s;animation-duration:25s"></line>
+            <line x1="-596.0442489200557" x2="-596.0442489200557" y1="0" y2="-131.85452141825652" stroke="#ffea00" stroke-width="5.746991014184254" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -42.584547173744866s;animation-duration:25s"></line>
+            <line x1="-134.55005163197887" x2="-134.55005163197887" y1="0" y2="-189.67523552514982" stroke="#ffea00" stroke-width="4.199793332843735" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -23.231522059399246s;animation-duration:50s"></line>
+            <line x1="997.4205809673417" x2="997.4205809673417" y1="0" y2="-101.70976784451915" stroke="#ffffff" stroke-width="3.220117466877674" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -21.02389078166643s;animation-duration:50s"></line>
+            <line x1="510.38142548617805" x2="510.38142548617805" y1="0" y2="-191.750499452395" stroke="#ffea00" stroke-width="3.218708969810499" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -0.06249152290207505s;animation-duration:25s"></line>
+            <line x1="-469.51113536827705" x2="-469.51113536827705" y1="0" y2="-265.1013494603608" stroke="#ffffff" stroke-width="4.546270295739604" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -0.9257402881841847s;animation-duration:25s"></line>
+            <line x1="1070.7437879328597" x2="1070.7437879328597" y1="0" y2="-169.14023632799712" stroke="#ffea00" stroke-width="6.565526517254935" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -29.52103066447176s;animation-duration:50s"></line>
+            <line x1="-997.5901462955624" x2="-997.5901462955624" y1="0" y2="-101.80844075219733" stroke="#ffea00" stroke-width="0.0814449116989645" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -8.863481095666215s;animation-duration:50s"></line>
+            <line x1="-336.0762378058666" x2="-336.0762378058666" y1="0" y2="-120.08435549828482" stroke="#ffea00" stroke-width="6.699301152878343" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -7.1671218208964715s;animation-duration:25s"></line>
+            <line x1="-831.6792814814895" x2="-831.6792814814895" y1="0" y2="-116.96151871397933" stroke="#ffffff" stroke-width="2.9035202733596632" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -36.89545534998897s;animation-duration:50s"></line>
+            <line x1="1160.8215966773073" x2="1160.8215966773073" y1="0" y2="-165.09299389329144" stroke="#ffffff" stroke-width="3.846215309378174" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -35.83807803000182s;animation-duration:25s"></line>
+            <line x1="415.3208082773734" x2="415.3208082773734" y1="0" y2="-196.58562147165128" stroke="#ffea00" stroke-width="2.068718180541812" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -14.688266070356315s;animation-duration:50s"></line>
+            <line x1="373.07079206298056" x2="373.07079206298056" y1="0" y2="-268.7056472264179" stroke="#ffea00" stroke-width="5.524624794447699" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -47.98416716511938s;animation-duration:50s"></line>
+            <line x1="-73.09903126172168" x2="-73.09903126172168" y1="0" y2="-246.7431069415336" stroke="#ffea00" stroke-width="4.975172449115545" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -34.59492959703463s;animation-duration:50s"></line>
+            <line x1="111.67974706358241" x2="111.67974706358241" y1="0" y2="-87.34888533976753" stroke="#ffffff" stroke-width="0.5479170172008277" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -22.91066400176309s;animation-duration:50s"></line>
+          </g>
+        </g>
+      </g>
+    </svg>
+      <div class="cs">
+        <div class="logo-header">
+          <img src="IMG/Satudarah.png">
+        </div>
+        <div class="menu-list">
+          <p class="active" id="menu-weapon">Waffen</p>
+        </div>
+        <section id="weapon">
+          <h3 class="info-text">
+            <p>
+              Die mit <span>Rot</span> markierten Waffen können vörübergehent nicht gekauft werden.
+            </p>
+          </h3>
+          <h3 class="info-text">
+            <p>Die <span>Gelb</span> markierten Waffen können <span>NICHT</span> gekauft werden!</p>
+          </h3>
+          <div class="product-list">
+            <div class="product">
+              <div class="header">
+                <img src="IMG/164px-Marksman-rifle-icon.webp">
+                <p class="weaponname"><span>Präzisions Gewehr</span></p>
+              </div>
+              <hr>
+              <div class="attachment ">
+                <fieldset>
+                  <div class="container checkbox">
+                  </div>
+              </fieldset>
+            </div>
+            <div class="price" style="color:white;">
+              <p>Waffenteile<br>Geld<br></p>
+                <p><span id="WEAPON_MARKSMANRIFLE_waffenteile">100</span> <br><span id="WEAPON_MARKSMANRIFLE_money">$1,000,000</span></p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="header">
+                <img src="IMG/164px-Precision-rifle-icon.webp">
+                <p class="weaponname"><span style="color:#ffffff;">Präzisions Schützengewehr</span></p>
+              </div>
+              <hr>
+              <div class="attachment kj">
+                <fieldset>
+                </fieldset>
+              </div>
+              <div class="price" style="color:rgb(255, 0, 0);">
+                <p>Waffenteile<br>Geld<br></p>
+                <p></p>
+                <p><span id="WEAPON_SAWNOFFSHOTGUN_waffenteile">50</span> <br><span id="WEAPON_SAWNOFFSHOTGUN_money">$500,000</span></p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="header">
+                <img src="IMG/164px-Heavy-rifle-icon.webp">
+                <p class="weaponname">Schweres Gewehr</p>
+              </div>
+              <hr>
+              <div class="attachment ">
+                <fieldset>
+                  <div class="container checkbox">
+                  </div>
+                  <div class="container checkbox">
+                  </div>
+                  <div class="container checkbox">
+                  </div>
+                  <div class="container checkbox">
+                  </div>
+                  <div class="container checkbox">
+                  </div>
+                </fieldset>
+              </div>
+              <div class="price" style="color:white;">
+                <p>Waffenteile<br>Geld<br></p>
+                <p></p>
+                <p><span id="WEAPON_HEAVYRIFLE_waffenteile">60</span> <br><span id="WEAPON_HEAVYRIFLE_money">$600,000</span>
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="header">
+                <img src="IMG/164px-Sawed-off-shotgun-icon.webp">
+                <p class="weaponname">Abgesägte Schrotflinte</p>
+              </div>
+              <hr>
+              <div class="attachment kj">
+                <fieldset>
+                </fieldset>
+              </div>
+              <div class="price" style="color:white;">
+                <p>Waffenteile<br>Geld<br></p>
+                <p></p>
+                <p><span id="WEAPON_PRECISIONRIFLE_waffenteile">30</span> <br><span id="WEAPON_PRECISIONRIFLE_money">$300,000</span></p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="header">
+                <img src="IMG/164px-Double-barrel-shotgun-icon.webp">
+                <p class="weaponname"><span>Doppelläufige Schrotflinte</span></p>
+              </div>
+              <hr>
+              <div class="attachment kj">
+                <fieldset>
+                </fieldset>
+              </div>
+              <div class="price" style="color:white;">
+                <p>Waffenteile<br>Geld<br></p>
+                <p></p>
+                <p><span id="WEAPON_DBSHOTGUN_waffenteile">50</span> <br><span id="WEAPON_DBSHOTGUN_money">$500,000</span>
+                </p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="header">
+                <img src="IMG/164px-Advanced-rifle-icon.webp">
+                <p class="weaponname">ADV</p>
+              </div>
+              <hr>
+              <div class="attachment ">
+                <fieldset>
+                  <div class="container checkbox">
+                  </div>
+                  <div class="container checkbox">
+                  </div>
+                  <div class="container checkbox">
+                  </div>
+                  <div class="container checkbox">
+                  </div>
+                </fieldset>
+              </div>
+              <div class="price" style="color:white;">
+                <p>Waffenteile<br>Geld<br></p>
+                <p></p>
+                <p><span id="WEAPON_ADVANCEDRIFLE_waffenteile">50</span> <br><span id="WEAPON_ADVANCEDRIFLE_money">$500,000</span></p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="header">
+                <img src="IMG/164px-Assault-rifle-icon.webp">
+                <p class="weaponname">Sturmgewehr</p>
+              </div>
+              <hr>
+              <div class="attachment ">
+                <fieldset>
+                  <div class="container checkbox">
+                  </div>
+                  <div class="container checkbox">
+                  </div>
+                  <div class="container checkbox">
+                  <div class="container checkbox">
+                </fieldset>
+              </div>
+              <div class="price" style="color:white;">
+                <p>Waffenteile<br>Geld<br></p>
+                <p></p>
+                <p><span id="WEAPON_ASSAULTRIFLE_waffenteile">40</span> <br><span id="WEAPON_ASSAULTRIFLE_money">$400,000</span></p>
+              </div>
+            </div>
+            <div class="product paufpreis">
+              <div class="header">
+                <img src="IMG/Appistol-icon.webp">
+                <p class="weaponname"><span style="color: #ffea00;">AP Pistole</span></p>
+              </div>
+              <hr>
+              <div class="attachment ">
+                <fieldset>
+                  <div class="container checkbox">
+                  <div class="container checkbox">
+                </fieldset>
+              </div>
+              <div class="price" style="color:white;">
+                <p>Waffenteile<br>Geld<br></p>
+                <p></p>
+                <p><span id="WEAPON_APPISTOL_waffenteile">40</span> <br><span id="WEAPON_APPISTOL_money">$400,000</span></p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="header">
+                <img src="IMG/164px-Compact-rifle-icon.webp">
+                <p class="weaponname">Kampfgewehr</p>
+              </div>
+              <hr>
+              <div class="attachment kj">
+                <fieldset>
+                </fieldset>
+              </div>
+              <div class="price" style="color:white;">
+                <p>Waffenteile<br>Geld<br></p>
+                <p></p>
+                <p><span id="WEAPON_COMPACTRIFLE_waffenteile">40</span> <br><span id="WEAPON_COMPACTRIFLE_money">$400,000</span></p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="header">
+                <img src="IMG/164px-Micro-smg-icon.webp">
+                <p class="weaponname">Micro-MP</p>
+              </div>
+              <hr>
+              <div class="attachment ">
+                <fieldset>
+                  <div class="container checkbox">
+                  <div class="container checkbox">
+                  <div class="container checkbox">
+                  <div class="container checkbox">
+                </fieldset>
+              </div>
+              <div class="price" style="color:white;">
+                <p>Waffenteile<br>Geld<br></p>
+                <p></p>
+                <p><span id="WEAPON_MICROSMG_waffenteile">30</span> <br><span id="WEAPON_MICROSMG_money">$300,000</span></p>
+              </div>
+            </div>
+            <div class="product">
+              <div class="header">
+                <img src="IMG/164px-Heavy-revolver-icon.webp">
+                <p class="weaponname"><span style="color: rgb(255, 255, 255);">Schwerer Revolver</span></p>
+              </div>
+              <hr>
+              <div class="attachment kj">
+                <fieldset>
+                </fieldset>
+              </div>
+              <div class="price" style="color:white;">
+                <p>Waffenteile<br>Geld<br></p>
+                <p></p>
+                <p><span id="WEAPON_REVOLVER_waffenteile">30</span> <br><span id="WEAPON_REVOLVER_money">$300,000</span></p>
+              </div>
+            </div>
+            <div class="product ">
+              <div class="header">
+                <img src="IMG/164px-Mini-smg-icon.webp">
+                <p class="weaponname">Mini SMG</p>
+              </div>
+              <hr>
+              <div class="attachment ">
+                <fieldset>
+                  <div class="container checkbox">
+                </fieldset>
+              </div>
+              <div class="price" style="color:white;">
+                <p>Waffenteile<br>Geld<br></p>
+                <p></p>
+                <p><span id="WEAPON_MINISMG_waffenteile">30</span> <br><span id="WEAPON_MINISMG_money">$300,000</span></p>
+              </div>
+            </div>
+            <div class="product ">
+              <div class="header">
+                <img src="IMG/164px-Machine-pistol-icon.webp">
+                <p class="weaponname">Maschinenpistole</p>
+              </div>
+              <hr>
+              <div class="attachment ">
+                <fieldset>
+                  <div class="container checkbox">
+                  <div class="container checkbox">
+                </fieldset>
+              </div>
+              <div class="price" style="color:white;">
+                <p>Waffenteile<br>Geld<br></p>
+                <p></p>
+                <p><span id="WEAPON_MACHINEPISTOL_waffenteile">30</span> <br><span id="WEAPON_MACHINEPISTOL_money">$300,000</span></p>
+              </div>
+            </div>
+            <div class="product paufpreis">
+              <div class="header">
+                <img src="IMG/164px-Double-action-revolver-icon.webp">
+                <p class="weaponname"><span style="color: rgb(255, 0, 0);">Double Action Revolver</span></p>
+              </div>
+              <hr>
+              <div class="attachment kj">
+                <fieldset>
+                </fieldset>
+              </div>
+              <div class="price" style="color:white;">
+                <p>Waffenteile<br>Geld<br></p>
+                <p></p>
+                <p><span id="WEAPON_DOUBLEACTION2_waffenteile">30</span> <br><span id="WEAPON_DOUBLEACTION2_money">$300,000</span></p>
+              </div>
+            </div>
+            <div class="product ">
+              <div class="header">
+                <img src="IMG/164px-Gusenberg-sweeper-icon.webp">
+                <p class="weaponname">Gusenberg</p>
+              </div>
+              <hr>
+              <div class="attachment kj">
+                <fieldset>
+                </fieldset>
+              </div>
+              <div class="price" style="color:white;">
+                <p>Waffenteile<br>Geld<br></p>
+                <p></p>
+                <p><span id="WEAPON_GUSENBERG_waffenteile">30</span> <br><span id="WEAPON_GUSENBERG_money">$300,000</span>
+                </p>
+              </div>
+            </div>
+            <div class="product paufpreis">
+              <div class="header">
+                <img src="IMG/164px-Marksman-pistol-icon.webp">
+                <p class="weaponname"><span style="color: rgb(255, 0, 0);">Präzisionspistole</span></p>
+              </div>
+              <hr>
+              <div class="attachment kj">
+                <fieldset>
+                </fieldset>
+              </div>
+              <div class="price" style="color:white;">
+                <p>Waffenteile<br>Geld<br></p>
+                <p></p>
+                <p><span id="WEAPON_MARKSMANPISTOL_waffenteile">30</span> <br><span id="WEAPON_MARKSMANPISTOL_money">$300,000</span></p>
+              </div>
+              </div>
+            </div>
+          </div>
+        </section>
+          <h3 class="info-text">
+          </ol>
+          </h4>
+        </section>
+        <div class="footer">
+          <div class="made">
+            </p>
